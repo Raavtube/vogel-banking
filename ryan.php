@@ -120,10 +120,10 @@ for ($count = 0; $count < $rows_count; $count++) {
       }
       if ($nonDupe == false){
 	    if (strpos($balance, "-") !== false){
-	      $output .= "<tr><td><span id='red'><b>$balance</b></span></td><td><span id='red'>$reason - Date: $date</span></td></tr>";
+	      $output .= "<tr><td><span id='red'><b>$balance</b></span></td><td><b><span id='red'>$reason - Date: $date</span></b></td></tr>";
 	    }
 	    else{
-	      $output .= "<tr><td><span id='green'><b>$balance</b></span></td><td><span id='green'>$reason - Date: $date</span> </td></tr>";
+	      $output .= "<tr><td><span id='green'><b>$balance</b></span></td><td><b><span id='green'>$reason - Date: $date</span></b></td></tr>";
       }
     }
       
@@ -139,10 +139,10 @@ for ($count = 0; $count < $rows_count; $count++) {
       }
       if ($nonDupe == false){
 	    if (strpos($balance, "-") !== false){
-        $output .= "<tr><td><span id='red'><b>$balance</b></span></td><td><span id='red'>$reason - Date: $date | Notes: $description</span></td></tr>";
+        $output .= "<tr><td><span id='red'><b>$balance</b></span></td><td><b><span id='red'>$reason - Date: $date | Notes: $description</span></b></td></tr>";
       }
       else{
-        $output .= "<tr><td><span id='green'><b>$balance</b></span></td><td><span id='green'>$reason - Date: $date | Notes: $description</span> </td></tr>";
+        $output .= "<tr><td><span id='green'><b>$balance</b></span></td><td><b><span id='green'>$reason - Date: $date | Notes: $description</span></b></td></tr>";
       }
     }
       
