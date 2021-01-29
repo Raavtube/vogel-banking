@@ -119,6 +119,7 @@ for ($count = 0; $count < $rows_count; $count++) {
       if (strpos($reason, "Tithe") !== false){
         $output .= "<tr><td><span id='yellow'><b>$balance</b></span></td><td><span id='yellow'>$reason - Date: $date</span> </td></tr>";
         $checkColor = true;
+        echo $checkColor;
       }
       if (strpos($reason, "Bank Deposit") !== false && $checkColor !== true){
         $output .= "<tr><td><span id='yellow'><b>$balance</b></span></td><td><span id='yellow'>$reason - Date: $date</span> </td></tr>";
