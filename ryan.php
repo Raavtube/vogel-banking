@@ -108,33 +108,43 @@ for ($count = 0; $count < $rows_count; $count++) {
   if ($reason == "CURRENT BALANCE"){
     $placeholder = 0;
   }else{
+    $nonDupe = false;
 	if ($description == ""){
       if (strpos($reason, "Tithe") !== false){
         $output .= "<tr><td><span id='yellow'><b>$balance</b></span></td><td><span id='yellow'>$reason - Date: $date</span> </td></tr>";
+        $nonDupe = true;
       }
-      if (strpos($reason, "Bank Deposit") !== false && $checkColor !== true){
+      if (strpos($reason, "Bank Deposit") !== false){
         $output .= "<tr><td><span id='yellow'><b>$balance</b></span></td><td><span id='yellow'>$reason - Date: $date</span> </td></tr>";
+        $nonDupe = true;
       }
+      if ($nonDupe == false){
 	    if (strpos($balance, "-") !== false){
 	      $output .= "<tr><td><span id='red'><b>$balance</b></span></td><td><span id='red'>$reason - Date: $date</span></td></tr>";
 	    }
 	    else{
 	      $output .= "<tr><td><span id='green'><b>$balance</b></span></td><td><span id='green'>$reason - Date: $date</span> </td></tr>";
-	    }
+      }
+    }
       
 	}else{
+    $nonDupe = false;
       if (strpos($reason, "Tithe") !== false){
         $output .= "<tr><td><span id='yellow'><b>$balance</b></span></td><td><span id='yellow'>$reason - Date: $date | Notes: $description</span> </td></tr>";
+        $nonDupe = true;
       }
       if (strpos($reason, "Bank Deposit") !== false){
         $output .= "<tr><td><span id='yellow'><b>$balance</b></span></td><td><span id='yellow'>$reason - Date: $date | Notes: $description</span> </td></tr>";
+        $nonDupe = true;
       }
+      if ($nonDupe == false){
 	    if (strpos($balance, "-") !== false){
         $output .= "<tr><td><span id='red'><b>$balance</b></span></td><td><span id='red'>$reason - Date: $date | Notes: $description</span></td></tr>";
       }
       else{
         $output .= "<tr><td><span id='green'><b>$balance</b></span></td><td><span id='green'>$reason - Date: $date | Notes: $description</span> </td></tr>";
       }
+    }
       
 
 	}
