@@ -1,0 +1,5 @@
+{
+    "require": {
+        "socketlabs/email-delivery": "^1.1"
+    }
+}

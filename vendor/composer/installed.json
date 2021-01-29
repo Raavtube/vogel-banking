@@ -1,0 +1,49 @@
+[
+    {
+        "name": "socketlabs/email-delivery",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/socketlabs/socketlabs-php.git",
+            "reference": "a364baeb275046d9a2f779e337ca57e95aa4523b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/socketlabs/socketlabs-php/zipball/a364baeb275046d9a2f779e337ca57e95aa4523b",
+            "reference": "a364baeb275046d9a2f779e337ca57e95aa4523b",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.6.0 || ^7.0"
+        },
+        "time": "2019-09-25T17:26:17+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Socketlabs\\": "InjectionApi/src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "SocketLabs",
+                "email": "developers@socketlabs.com",
+                "homepage": "https://www.socketlabs.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "SocketLabs Email Delivery PHP Client Library ",
+        "homepage": "https://github.com/socketlabs/socketlabs-php",
+        "keywords": [
+            "deliverability",
+            "email",
+            "socketlabs",
+            "transactional-email"
+        ]
+    }
+]
