@@ -200,7 +200,7 @@ tr:nth-child(even) {
   color: green;
 }
 #yellow{
-  color: darkblue;
+  color: #3966FF;
 }
 
 
